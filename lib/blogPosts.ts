@@ -15,6 +15,8 @@
    "https://www.cloudsine.tech/making-sense-of-ai-security-frameworks-owasp-mitre-atlas-and-the-nist-rmf/",
    "https://www.cloudsine.tech/llm-vulnerabilities-8-critical-threats-and-how-to-mitigate-them/",
    "https://www.cloudsine.tech/detecting-and-defending-against-adversarial-prompts-in-generative-ai-systems/",
+  "https://www.cloudsine.tech/how-to-deploy-ai-chatbots-securely/",
+  "https://www.cloudsine.tech/the-definitive-guide-to-generative-ai-security-solutions-for-enterprises/",
  ]
  
  /* ─────────────────────────── 2. Report mapping
@@ -26,6 +28,10 @@
  export const BLOG_REPORTS: Record<string, (() => Promise<ReportModule>) | null> = {
    // Report 4 – RAG security  ➜  not written yet
    "https://www.cloudsine.tech/how-to-secure-your-retrieval-augmented-generation-rag-applications/":
+     null,
+  "https://www.cloudsine.tech/how-to-deploy-ai-chatbots-securely/":
+     null,
+  "https://www.cloudsine.tech/the-definitive-guide-to-generative-ai-security-solutions-for-enterprises/":
      null,
  
    // Report 3 – AI Security Frameworks  (READY, lives at /report-three)
