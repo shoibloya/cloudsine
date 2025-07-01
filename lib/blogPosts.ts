@@ -28,9 +28,9 @@
  export const BLOG_REPORTS: Record<string, (() => Promise<ReportModule>) | null> = {
    // Report 4 – RAG security  ➜  not written yet
    "https://www.cloudsine.tech/how-to-secure-your-retrieval-augmented-generation-rag-applications/":
-     null,
+     () => import("@/app/report-six/page"),,
   "https://www.cloudsine.tech/how-to-deploy-ai-chatbots-securely/":
-     null,
+     () => import("@/app/report-five/page"),,
   "https://www.cloudsine.tech/the-definitive-guide-to-generative-ai-security-solutions-for-enterprises/":
      () => import("@/app/report-four/page"),
  
