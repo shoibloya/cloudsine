@@ -15,11 +15,21 @@ import {
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { outlines } from "@/lib/outline";          /* ← NEW */
 
-const COMPANY_NAME = "Cloudsine";
+const COMPANY_NAME = "Cloudsine"; 
 
-// Sample blog data - replace with your actual data source
-const seedPosts = [{}]
+/* outlines from outline.ts → convert to seed-compatible items          */
+const seedPosts = outlines.map((o, idx) => ({
+  id: idx + 9,   // unique numeric id
+  title: o.articleTitle,
+  excerpt: "Blog outline",
+  imageUrl: "/outline.png",             // as requested
+  date: o.date,
+  readTime: "N/A",
+  url: `/${o.slug}`,
+  status: "pending",
+}));
 
 type BlogCore = (typeof seedPosts)[number];
 type BlogPost = BlogCore & { key: string };
