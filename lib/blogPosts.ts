@@ -32,7 +32,7 @@
   "https://www.cloudsine.tech/how-to-deploy-ai-chatbots-securely/":
      null,
   "https://www.cloudsine.tech/the-definitive-guide-to-generative-ai-security-solutions-for-enterprises/":
-     null,
+     () => import("@/app/report-four/page"),
  
    // Report 3 – AI Security Frameworks  (READY, lives at /report-three)
    "https://www.cloudsine.tech/making-sense-of-ai-security-frameworks-owasp-mitre-atlas-and-the-nist-rmf/":
