@@ -50,14 +50,14 @@ export function BlogSection() {
       setPosts(loaded);
 
       /* seed once */
-     seedPosts.forEach((p) => {
-  if (!loaded.some((l) => l.id === p.id)) {
-    set(
-      child(listRef, String(p.id)),
-      { ...p, date: String(p.date) }   // guarantee it’s a plain string
-    );
-  }
-});
+      seedPosts.forEach((p) => {
+        if (!loaded.some((l) => l.id === p.id)) {
+          set(
+            child(listRef, String(p.id)),
+            { ...p, date: String(p.date) }   // guarantee it’s a plain string
+          );
+        }
+      });
     });
 
     return () => unsub();
@@ -65,9 +65,16 @@ export function BlogSection() {
 
   /* ---------- splits ---------- */
   const { published, pending } = useMemo(() => {
+    const orderPosts = (arr: BlogPost[]) => [
+      ...arr.filter((p) => p.imageUrl !== "/outline.png"),
+      ...arr
+        .filter((p) => p.imageUrl === "/outline.png")
+        .sort((a, b) => a.id - b.id),
+    ];
+
     return {
-      published: posts.filter((p) => p.status === "published"),
-      pending: posts.filter((p) => p.status === "pending"),
+      published: orderPosts(posts.filter((p) => p.status === "published")),
+      pending: orderPosts(posts.filter((p) => p.status === "pending")),
     };
   }, [posts]);
 
@@ -220,4 +227,3 @@ function Empty({ state }: { state: "published" | "pending" }) {
     </div>
   );
 }
-
