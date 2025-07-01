@@ -140,6 +140,32 @@ export const outlines: Outline[] = [
       { keyword: "LLM deployment trade-offs", intent: "Informational" },
       { keyword: "enterprise guide to LLM hosting", intent: "Transactional" }
     ]
-  }
+  },
+
+  /* ───────────── 8. Securing Multi-Modal LLMs Across Text, Image & Code ───────────── */
+{
+  slug: "multimodal-llm-security-enterprise",
+  date: "July 20, 2025",
+  seoTitle:
+    "SEO Keyword Plan: Securing Multi-Modal LLMs in the Enterprise (2025 Guide)",
+  seoDescription:
+    "A holistic security framework for large models that ingest and emit text, images and code, covering new prompt-injection vectors and content-safety tests.",
+  articleTitle:
+    "One Model, Many Attack Surfaces: Managing Security & Abuse in Multi-Modal LLMs",
+  gapHeading: "Content Gap",
+  gapBody:
+    "Blogs mention isolated demo hacks; none compile a defence-in-depth strategy across modalities or map tests to OWASP LLM Top-10.",
+  fillGapHeading: "How Cloudsine Can Fill the Gap",
+  fillGapBody:
+    "Show how to partition model layers, sandbox vision encoders, run multi-modal toxicity filters, and apply modality-aware rate limits; include an OWASP mapping table.",
+  keywords: [
+    { keyword: "multimodal LLM security", intent: "Informational" },
+    { keyword: "image prompt injection", intent: "Informational" },
+    { keyword: "vision-language model risks", intent: "Informational" },
+    { keyword: "OWASP LLM Top 10 multimodal", intent: "Informational" },
+    { keyword: "AI abuse mitigation images", intent: "Transactional" }
+  ]
+}
+
 
 ];
